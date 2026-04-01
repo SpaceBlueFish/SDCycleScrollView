@@ -480,6 +480,10 @@ NSString * const ID = @"SDCycleScrollViewCell";
     [[self class] clearImagesCache];
 }
 
+- (UICollectionView *)mainCollectionView{
+    return self.mainView;
+}
+
 + (void)clearImagesCache
 {
     [[[SDWebImageManager sharedManager] imageCache] clearWithCacheType:SDImageCacheTypeDisk completion:nil];
